@@ -1,9 +1,9 @@
-/*
+ï»¿/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
  * Website	: https://github.com/ldcsaa
- * Project	: https://github.com/ldcsaa/HP-Socket/HP-Socket
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 44636872, 75375912
@@ -25,14 +25,14 @@
 
 #include "GeneralHelper.h"
 
-// RECT °ïÖúºê
+// RECT å¸®åŠ©å®
 #define RC_WIDTH(rc)		(rc.right - rc.left)
 #define RC_HEIGHT(rc)		(rc.bottom - rc.top)
 #define RC_CENTER_X(rc)		((rc.right + rc.left) / 2)
 #define RC_CENTER_Y(rc)		((rc.bottom + rc.top) / 2)
 
 /************************************************************************/
-/*                 			  ÏûÏ¢Ó³Éä°ïÖúºê			 					*/
+/*                 			  æ¶ˆæ¯æ˜ å°„å¸®åŠ©å®			 					*/
 /************************************************************************/
 
 /* see: WindowsX.h */
@@ -71,7 +71,7 @@
 		switch(msg)																		\
 		{
 
-// ´°¿Ú¹ı³ÌÎªÀàÖĞµÄ¾²Ì¬³ÉÔ±º¯Êı
+// çª—å£è¿‡ç¨‹ä¸ºç±»ä¸­çš„é™æ€æˆå‘˜å‡½æ•°
 #define GET_WND_PROC(theClass)			GET_WND_PROC_INTERNAL(theClass, ::)
 #define GET_DLG_PROC(theClass)			GET_DLG_PROC_INTERNAL(theClass, ::)
 
@@ -86,7 +86,7 @@ public:												\
 #define BEGIN_MSG_MAP(theClass)			BEGIN_MSG_MAP_INTERNAL(theClass, ::)
 #define BEGIN_DLG_MSG_MAP(theClass)		BEGIN_DLG_MSG_MAP_INTERNAL(theClass, ::)
 
-/* ÏûÏ¢´¦Àíº¯ÊıµÄÉùÃ÷Çë²Î¿¼: <WindowsX.h> µÄ HANDLE_MSG */
+/* æ¶ˆæ¯å¤„ç†å‡½æ•°çš„å£°æ˜è¯·å‚è€ƒ: <WindowsX.h> çš„ HANDLE_MSG */
 #define ADD_MSG_MAP(msg, fn)						\
 		case (msg): result = HANDLE_##msg((hWnd), (wParam), (lParam), (fn));	break;
 
@@ -113,7 +113,7 @@ public:												\
 		return retVal;																	\
 	}
 
-// ´°¿Ú¹ı³ÌÎªÈ«¾Öº¯Êı
+// çª—å£è¿‡ç¨‹ä¸ºå…¨å±€å‡½æ•°
 #define GET_GLOBAL_WND_PROC(theClass)			GET_WND_PROC_INTERNAL(theClass,			_)
 #define DECLARE_GLOBAL_MSG_MAP(theClass)		DECLARE_MSG_MAP_INTERNAL(theClass,		_)
 #define BEGIN_GLOBAL_MSG_MAP(theClass)			BEGIN_MSG_MAP_INTERNAL(theClass,		_)
@@ -124,7 +124,7 @@ public:												\
 #define BEGIN_GLOBAL_DLG_MSG_MAP(theClass)		BEGIN_DLG_MSG_MAP_INTERNAL(theClass,	_)
 #define END_GLOBAL_DLG_MSG_MAP()				END_DLG_MSG_MAP()
 
-// °ó¶¨¶ÔÏóÖ¸Õëµ½´°¿Ú
+// ç»‘å®šå¯¹è±¡æŒ‡é’ˆåˆ°çª—å£
 #define ATTACH_OBJ_PTR_TO_WINDOW(hwnd, objPtr)	::SetWindowLongPtr(hwnd, GWL_USERDATA, (LONG_PTR)objPtr)
 #define GET_OBJ_PTR_FROM_WINDOW(hwnd, theClass)	(theClass*)(LONG_PTR)::GetWindowLongPtr(hwnd, GWL_USERDATA)
 
@@ -134,7 +134,7 @@ public:												\
 
 
 /************************************************************************/
-/*                 		  Ó¦ÓÃ³ÌĞòÎ¨Ò»ÊµÀı			 	            */
+/*                 		  åº”ç”¨ç¨‹åºå”¯ä¸€å®ä¾‹			 	            */
 /************************************************************************/
 
 class COnlyOneApp
@@ -205,7 +205,7 @@ private:
 };
 
 /************************************************************************/
-/*                   	¾ä±ú (HANDLE) ÖÇÄÜ°ü×°Æ÷ 		 		        */
+/*                   	å¥æŸ„ (HANDLE) æ™ºèƒ½åŒ…è£…å™¨ 		 		        */
 /************************************************************************/
 
 template<HANDLE NULL_VALUE>
@@ -270,11 +270,11 @@ private:
 	HANDLE	m_h;
 };
 
-typedef auto_handle<INVALID_HANDLE_VALUE>	auto_file_handle;	// ÎÄ¼şÖÇÄÜ¾ä±ú
-typedef auto_handle<nullptr>				auto_res_handle;	// ÆÕÍ¨×ÊÔ´ÖÇÄÜ¾ä±ú
+typedef auto_handle<INVALID_HANDLE_VALUE>	auto_file_handle;	// æ–‡ä»¶æ™ºèƒ½å¥æŸ„
+typedef auto_handle<nullptr>				auto_res_handle;	// æ™®é€šèµ„æºæ™ºèƒ½å¥æŸ„
 
 /************************************************************************/
-/*                 	  	 	DC ÖÇÄÜ°ü×°Æ÷ 					            */
+/*                 	  	 	DC æ™ºèƒ½åŒ…è£…å™¨ 					            */
 /************************************************************************/
 
 class auto_dc
@@ -497,7 +497,7 @@ public:
 	HDC			m_hdc;
 };
 /************************************************************************/
-/*                 	  	 	GDI Object ÖÇÄÜ°ü×°Æ÷ 					    */
+/*                 	  	 	GDI Object æ™ºèƒ½åŒ…è£…å™¨ 					    */
 /************************************************************************/
 
 template<class T>

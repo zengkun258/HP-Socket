@@ -1,9 +1,9 @@
-/*
+ï»¿/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
  * Website	: https://github.com/ldcsaa
- * Project	: https://github.com/ldcsaa/HP-Socket/HP-Socket
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 44636872, 75375912
@@ -25,19 +25,19 @@
 
 typedef DWORD							TID, THR_ID, NTHR_ID, PID, PRO_ID;
 
-/* ×î´ó¹¤×÷Ïß³ÌÊı */
+/* æœ€å¤§å·¥ä½œçº¿ç¨‹æ•° */
 #define MAX_WORKER_THREAD_COUNT			512
-/* Ä¬ÈÏ¶ÔÏó»º´æ¶ÔÏóËø¶¨Ê±¼ä */
+/* é»˜è®¤å¯¹è±¡ç¼“å­˜å¯¹è±¡é”å®šæ—¶é—´ */
 #define DEFAULT_OBJECT_CACHE_LOCK_TIME	(20 * 1000)
-/* Ä¬ÈÏ¶ÔÏó»º´æ³Ø´óĞ¡ */
+/* é»˜è®¤å¯¹è±¡ç¼“å­˜æ± å¤§å° */
 #define DEFAULT_OBJECT_CACHE_POOL_SIZE	600
-/* Ä¬ÈÏ¶ÔÏó»º´æ³Ø»ØÊÕ·§Öµ */
+/* é»˜è®¤å¯¹è±¡ç¼“å­˜æ± å›æ”¶é˜€å€¼ */
 #define DEFAULT_OBJECT_CACHE_POOL_HOLD	600
-/* Ä¬ÈÏÄÚ´æ¿é»º´æÈİÁ¿ */
+/* é»˜è®¤å†…å­˜å—ç¼“å­˜å®¹é‡ */
 #define DEFAULT_BUFFER_CACHE_CAPACITY	4096
-/* Ä¬ÈÏÄÚ´æ¿é»º´æ³Ø´óĞ¡ */
+/* é»˜è®¤å†…å­˜å—ç¼“å­˜æ± å¤§å° */
 #define DEFAULT_BUFFER_CACHE_POOL_SIZE	1024
-/* Ä¬ÈÏÄÚ´æ¿é»º´æ³Ø»ØÊÕ·§Öµ */
+/* é»˜è®¤å†…å­˜å—ç¼“å­˜æ± å›æ”¶é˜€å€¼ */
 #define DEFAULT_BUFFER_CACHE_POOL_HOLD	1024
 
 #define SYS_PAGE_SIZE					(GetSysPageSize())
@@ -52,9 +52,9 @@ typedef DWORD							TID, THR_ID, NTHR_ID, PID, PRO_ID;
 DWORD GetSysPageSize();
 DWORD GetDefaultWorkerThreadCount();
 
-// »ñÈ¡ÏµÍ³ĞÅÏ¢
+// è·å–ç³»ç»Ÿä¿¡æ¯
 VOID SysGetSystemInfo(LPSYSTEM_INFO pInfo);
-// »ñÈ¡ CPU ºËÊı
+// è·å– CPU æ ¸æ•°
 DWORD SysGetNumberOfProcessors();
-// »ñÈ¡Ò³Ãæ´óĞ¡
+// è·å–é¡µé¢å¤§å°
 DWORD SysGetPageSize();

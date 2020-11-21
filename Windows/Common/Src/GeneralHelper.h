@@ -1,9 +1,9 @@
-/*
+﻿/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
  * Website	: https://github.com/ldcsaa
- * Project	: https://github.com/ldcsaa/HP-Socket/HP-Socket
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 44636872, 75375912
@@ -27,20 +27,20 @@ Optional Macros:
 
 Windows:
 ++++++++++++++++++++++
-_WIN32_WINNT		: Windows NT �汾	��Ĭ�ϣ�_WIN32_WINNT_WINXP / _WIN32_WINNT_WIN7��
-WINVER				: Windows �汾		��Ĭ�ϣ�_WIN32_WINNT��
-_USE_MFC			: ʹ�� MFC
-_WINSOCK_SUPPORT	: ֧�� Windows Socket
-_NO_RIBBONS_SUPPORT	: ��֧�� Ribbons ������
-_DETECT_MEMORY_LEAK	: DEBUG ״̬��֧���ڴ�й¶���
+_WIN32_WINNT		: Windows NT 版本	（默认：_WIN32_WINNT_WINXP / _WIN32_WINNT_WIN7）
+WINVER				: Windows 版本		（默认：_WIN32_WINNT）
+_USE_MFC			: 使用 MFC
+_WINSOCK_SUPPORT	: 支持 Windows Socket
+_NO_RIBBONS_SUPPORT	: 不支持 Ribbons 界面风格
+_DETECT_MEMORY_LEAK	: DEBUG 状态下支持内存泄露检查
 
 Windows CE:
 ++++++++++++++++++++++
-WINVER				: Windows �汾
-_USE_MFC			: ʹ�� MFC
-_WINSOCK_SUPPORT	: ֧�� Windows Socket
-_DETECT_MEMORY_LEAK	: DEBUG ״̬��֧���ڴ�й¶���
-_ONLY_DETECT_CONFIRMED_MEMORY_LEAK_	: ֻ�����ܹ�ȷ�ϵ��ڴ�й¶������ȷ���Ĳ����棩
+WINVER				: Windows 版本
+_USE_MFC			: 使用 MFC
+_WINSOCK_SUPPORT	: 支持 Windows Socket
+_DETECT_MEMORY_LEAK	: DEBUG 状态下支持内存泄露检查
+_ONLY_DETECT_CONFIRMED_MEMORY_LEAK_	: 只报告能够确认的内存泄露（不能确定的不报告）
 ---------------------------
 VC 2019
 	_MSC_VER == 1920

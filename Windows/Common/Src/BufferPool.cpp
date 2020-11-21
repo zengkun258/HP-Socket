@@ -1,9 +1,9 @@
-/*
+Ôªø/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
  * Website	: https://github.com/ldcsaa
- * Project	: https://github.com/ldcsaa/HP-Socket/HP-Socket
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 44636872, 75375912
@@ -24,7 +24,7 @@
 /******************************************************************************
 Module:  BufferPool.cpp
 Notices: Copyright (c) 2013 Bruce Liang
-Purpose: ºÚµ•ƒ⁄¥Êª∫≥Â≥ÿ
+Purpose: ÁÆÄÂçïÂÜÖÂ≠òÁºìÂÜ≤Ê±†
 Desc:
 ******************************************************************************/
 

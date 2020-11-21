@@ -1,9 +1,9 @@
-/*
+ï»¿/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
  * Website	: https://github.com/ldcsaa
- * Project	: https://github.com/ldcsaa/HP-Socket/HP-Socket
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 44636872, 75375912
@@ -24,17 +24,17 @@
 /******************************************************************************
 Module:  PrivateHeap.h
 Notices: Copyright (c) 2006 Bruce Liang
-Purpose: ¹ÜÀí½ø³ÌË½ÓĞ¶Ñ.
+Purpose: ç®¡ç†è¿›ç¨‹ç§æœ‰å †.
 Desc:
-		 1. CPrivateHeap:		×Ô¶¯´´½¨ºÍÏú»Ù½ø³ÌË½ÓĞ¶Ñ
-								Ã¿Ò»¸ö¸ÃÀàµÄ¶ÔÏó¶¼´ú±íÒ»¸öË½ÓĞ¶Ñ, ËùÒÔ
-								¸ÃÀà¶ÔÏóµÄÌØµãÊÇ: Ò»°ãÉùÃ÷ÖÜÆÚ¶¼±È½Ï³¤
-								Í¨³£×÷ÎªÈ«¾Ö¶ÔÏó, ÆäËûÀàµÄ¾²Ì¬³ÉÔ±¶ÔÏó
-								»òÕßÒ»Ğ©³¤ÉúÃüÖÜÆÚÀà¶ÔÏóµÄ³ÉÔ±¶ÔÏó
-		 2. CPrivateHeapBuffer: ÔÚË½ÓĞ¶ÑÖĞ×Ô¶¯·ÖÅäºÍÊÍ·ÅÖ¸¶¨´óĞ¡µÄÄÚ´æ
-								Ò»°ãÓÃÓÚÔÚº¯ÊıÌåÄÚ·ÖÅäºÍÊÍ·Å¾Ö²¿×÷ÓÃÓòµÄ¶ÑÄÚ´æ
-								´Ó¶ø±ÜÃâ¶Ô CPrivateHeap::Alloc() ºÍ 
-								CPrivateHeap::Free() µÄµ÷ÓÃ
+		 1. CPrivateHeap:		è‡ªåŠ¨åˆ›å»ºå’Œé”€æ¯è¿›ç¨‹ç§æœ‰å †
+								æ¯ä¸€ä¸ªè¯¥ç±»çš„å¯¹è±¡éƒ½ä»£è¡¨ä¸€ä¸ªç§æœ‰å †, æ‰€ä»¥
+								è¯¥ç±»å¯¹è±¡çš„ç‰¹ç‚¹æ˜¯: ä¸€èˆ¬å£°æ˜å‘¨æœŸéƒ½æ¯”è¾ƒé•¿
+								é€šå¸¸ä½œä¸ºå…¨å±€å¯¹è±¡, å…¶ä»–ç±»çš„é™æ€æˆå‘˜å¯¹è±¡
+								æˆ–è€…ä¸€äº›é•¿ç”Ÿå‘½å‘¨æœŸç±»å¯¹è±¡çš„æˆå‘˜å¯¹è±¡
+		 2. CPrivateHeapBuffer: åœ¨ç§æœ‰å †ä¸­è‡ªåŠ¨åˆ†é…å’Œé‡Šæ”¾æŒ‡å®šå¤§å°çš„å†…å­˜
+								ä¸€èˆ¬ç”¨äºåœ¨å‡½æ•°ä½“å†…åˆ†é…å’Œé‡Šæ”¾å±€éƒ¨ä½œç”¨åŸŸçš„å †å†…å­˜
+								ä»è€Œé¿å…å¯¹ CPrivateHeap::Alloc() å’Œ 
+								CPrivateHeap::Free() çš„è°ƒç”¨
 
 Examples:
 			CPrivateHeap g_hpPrivate;
@@ -42,7 +42,7 @@ Examples:
 			int _tmain(int argc, _TCHAR* argv[])
 			{
 				CPrivateHeapStrBuffer buff(g_hpPrivate, 32);
-				lstrcpy(buff, _T("Ê§°ÜÄË³É¹¦Ö®Ä¸"));
+				lstrcpy(buff, _T("å¤±è´¥ä¹ƒæˆåŠŸä¹‹æ¯"));
 				SIZE_T size = buff.Size();
 				buff.ReAlloc(40);
 				size = buff.Size();
@@ -50,7 +50,7 @@ Examples:
 				// OR
 				// ASSERT(g_hpPrivate.IsValid());
 				// TCHAR* pch	= (TCHAR*)g_hpPrivate.Alloc(32 * sizeof(TCHAR));
-				// lstrcpy(pch, _T("Ê§°ÜÄË³É¹¦Ö®Ä¸"));
+				// lstrcpy(pch, _T("å¤±è´¥ä¹ƒæˆåŠŸä¹‹æ¯"));
 				// SIZE_T size = g_hpPrivate.Size(pch);
 				// g_hpPrivate.ReAlloc(pch, 40 * sizeof(TCHAR));
 				// size = g_hpPrivate.Size(pch);

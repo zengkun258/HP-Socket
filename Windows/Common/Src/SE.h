@@ -1,9 +1,9 @@
-/*
+ï»¿/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
- * Website	: http://www.jessma.org
- * Project	: https://github.com/ldcsaa
+ * Website	: https://github.com/ldcsaa
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 75375912, 44636872
@@ -25,20 +25,20 @@
 
 Module:  SE.h
 Notices: Copyright (c) 2006 Bruce Liang
-Purpose: °Ñ½á¹¹»¯Òì³£×ª»»³É C++ Òì³£.
+Purpose: æŠŠç»“æ„åŒ–å¼‚å¸¸è½¬æ¢æˆ C++ å¼‚å¸¸.
 Desc:
-		 1. ÓÃ C++ ·½Ê½´¦Àí½á¹¹»¯Òì³£
+		 1. ç”¨ C++ æ–¹å¼å¤„ç†ç»“æ„åŒ–å¼‚å¸¸
 
 Usage:
-		 1. ÏîÄ¿ -> ÅäÖÃÊôĞÔ -> C/C++ -> ´úÂëÉú³É -> ÆôÓÃ C++ Òì³£Ñ¡Ôñ"·ñ"
-		 2. ÏîÄ¿ -> ÅäÖÃÊôĞÔ -> C/C++ -> ÃüÁîĞĞ -> ¼ÓÈë "/EHac"
-		 3. ÔÚÃ¿¸öÏß³ÌµÄÈë¿Ú´¦µ÷ÓÃ: MapSEx2CppEx()
-		 4. ÔÚÒª´¦Àí½á¹¹»¯Òì³£µÄµØ·½Ê¹ÓÃ try{...} catch(CSE se){...}
+		 1. é¡¹ç›® -> é…ç½®å±æ€§ -> C/C++ -> ä»£ç ç”Ÿæˆ -> å¯ç”¨ C++ å¼‚å¸¸é€‰æ‹©"å¦"
+		 2. é¡¹ç›® -> é…ç½®å±æ€§ -> C/C++ -> å‘½ä»¤è¡Œ -> åŠ å…¥ "/EHac"
+		 3. åœ¨æ¯ä¸ªçº¿ç¨‹çš„å…¥å£å¤„è°ƒç”¨: MapSEx2CppEx()
+		 4. åœ¨è¦å¤„ç†ç»“æ„åŒ–å¼‚å¸¸çš„åœ°æ–¹ä½¿ç”¨ try{...} catch(CSE se){...}
 
 Rule:	
 
-Example:	1. ¼û: TestSE ²âÊÔ³ÌĞò
-			2. ÏÂÃæµÄ´úÂëÆ¬¶Ï
+Example:	1. è§: TestSE æµ‹è¯•ç¨‹åº
+			2. ä¸‹é¢çš„ä»£ç ç‰‡æ–­
 			void ThreadFunc(PVOID pv)
 			{
 				// Must be called before any exceptions are raised
@@ -79,7 +79,7 @@ Example:	1. ¼û: TestSE ²âÊÔ³ÌĞò
 class CSE
 {
 public:
-	// ½á¹¹»¯Òì³£×ª»»³É C++ Òì³£.
+	// ç»“æ„åŒ–å¼‚å¸¸è½¬æ¢æˆ C++ å¼‚å¸¸.
 	static void MapSE2CE() {_set_se_translator(TranslateSE2CE);}
 
 	operator DWORD() {return m_er.ExceptionCode;}

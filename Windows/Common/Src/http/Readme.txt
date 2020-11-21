@@ -1,4 +1,4 @@
-Modifications
+﻿Modifications
 --------------------
 1. move 'enum state' from http_parser.cpp to http_parser.h
 2. http_parser.h ignore warning: 4005

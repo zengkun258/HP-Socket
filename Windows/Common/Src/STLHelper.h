@@ -1,9 +1,9 @@
-/*
+ï»¿/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
  * Website	: https://github.com/ldcsaa
- * Project	: https://github.com/ldcsaa/HP-Socket/HP-Socket
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 44636872, 75375912
@@ -180,14 +180,14 @@ typedef unordered_set<UINT_PTR>			uint_ptr_unordered_set;
 typedef unordered_set<ULONG_PTR>		ulong_ptr_unordered_set;
 
 /*****************************************************************************/
-/******************************** ÈİÆ÷²Ù×÷º¯Êı *******************************/
+/******************************** å®¹å™¨æ“ä½œå‡½æ•° *******************************/
 
 /**********************************
-ÃèÊö: Çå³ıÆÕÍ¨¼¯ºÏ , ÊÊÓÃÓÚ vector<Object> / list<Object>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æ™®é€šé›†åˆ , é€‚ç”¨äº vector<Object> / list<Object>
+å‚æ•°: 
 	v		: vector / list / set
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class Set> void ClearSet(Set& v)
 {
@@ -200,11 +200,11 @@ template<class Set> struct Set_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸Õë¼¯ºÏ (Çå³ıÇ°ÏÈÊÍ·ÅÖ¸Õë), ÊÊÓÃÓÚ vector<Object*> / list<Object*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆé›†åˆ (æ¸…é™¤å‰å…ˆé‡Šæ”¾æŒ‡é’ˆ), é€‚ç”¨äº vector<Object*> / list<Object*>
+å‚æ•°: 
 		v		: vector / list / set
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrSet> void ClearPtrSet(PtrSet& v)
 {
@@ -223,11 +223,11 @@ template<class PtrSet> struct PtrSet_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸Õë¼¯ºÏ (Ö¸ÕëÍ¬Ê±ÓÖÖ¸ÏòÊı×é), ÊÊÓÃÓÚ vector<Object*[]> / list<Object*[]>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆé›†åˆ (æŒ‡é’ˆåŒæ—¶åˆæŒ‡å‘æ•°ç»„), é€‚ç”¨äº vector<Object*[]> / list<Object*[]>
+å‚æ•°: 
 		v		: vector / list / set
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrArraySet> void ClearPtrArraySet(PtrArraySet& v)
 {
@@ -246,11 +246,11 @@ template<class PtrArraySet> struct PtrArraySet_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÆÕÍ¨Ó°Éä , ÊÊÓÃÓÚ map<key, value>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æ™®é€šå½±å°„ , é€‚ç”¨äº map<key, value>
+å‚æ•°: 
 	v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class Map> void ClearMap(Map& v)
 {
@@ -263,11 +263,11 @@ template<class Map> struct Map_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸ÕëÓ°Éä (Çå³ıÇ°ÏÈÊÍ·ÅÖ¸Õë), ÊÊÓÃÓÚ map<key, Object*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆå½±å°„ (æ¸…é™¤å‰å…ˆé‡Šæ”¾æŒ‡é’ˆ), é€‚ç”¨äº map<key, Object*>
+å‚æ•°: 
 		v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrMap> void ClearPtrMap(PtrMap& v)
 {
@@ -286,11 +286,11 @@ template<class PtrMap> struct PtrMap_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸ÕëÓ°Éä (Ö¸ÕëÍ¬Ê±ÓÖÖ¸ÏòÊı×é), ÊÊÓÃÓÚ map<key, Object*[]>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆå½±å°„ (æŒ‡é’ˆåŒæ—¶åˆæŒ‡å‘æ•°ç»„), é€‚ç”¨äº map<key, Object*[]>
+å‚æ•°: 
 		v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrArrayMap> void ClearPtrArrayMap(PtrArrayMap& v)
 {
@@ -309,11 +309,11 @@ template<class PtrArrayMap> struct PtrArrayMap_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ı¼¯ºÏ-¼¯ºÏ (Çå³ıÇ°ÏÈÇå³ıÄÚ²¿¼¯ºÏ), ÊÊÓÃÓÚ set<vector<Object>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤é›†åˆ-é›†åˆ (æ¸…é™¤å‰å…ˆæ¸…é™¤å†…éƒ¨é›†åˆ), é€‚ç”¨äº set<vector<Object>*>
+å‚æ•°: 
 		v		: vector / list / set
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class SetSet> void ClearSetSet(SetSet& v)
 {
@@ -335,11 +335,11 @@ template<class SetSet> struct SetSet_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸Õë¼¯ºÏ-¼¯ºÏ (Çå³ıÇ°ÏÈÇå³ıÄÚ²¿Ö¸Õë¼¯ºÏ), ÊÊÓÃÓÚ set<vector<Object*>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆé›†åˆ-é›†åˆ (æ¸…é™¤å‰å…ˆæ¸…é™¤å†…éƒ¨æŒ‡é’ˆé›†åˆ), é€‚ç”¨äº set<vector<Object*>*>
+å‚æ•°: 
 		v		: vector / list / set
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrSetSet> void ClearPtrSetSet(PtrSetSet& v)
 {
@@ -361,11 +361,11 @@ template<class PtrSetSet> struct PtrSetSet_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸ÕëÊı×é¼¯ºÏÓ°Éä (Çå³ıÇ°ÏÈÇå³ıÖ¸ÕëÊı×é¼¯ºÏ), ÊÊÓÃÓÚ map<vector<Object*[]>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆæ•°ç»„é›†åˆå½±å°„ (æ¸…é™¤å‰å…ˆæ¸…é™¤æŒ‡é’ˆæ•°ç»„é›†åˆ), é€‚ç”¨äº map<vector<Object*[]>*>
+å‚æ•°: 
 		v		: vector / list / set
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrArraySetSet> void ClearPtrArraySetSet(PtrArraySetSet& v)
 {
@@ -387,11 +387,11 @@ template<class PtrArraySetSet> struct PtrArraySetSet_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ı¼¯ºÏÓ°Éä (Çå³ıÇ°ÏÈÇå³ı¼¯ºÏ), ÊÊÓÃÓÚ map<key, vector<Object>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤é›†åˆå½±å°„ (æ¸…é™¤å‰å…ˆæ¸…é™¤é›†åˆ), é€‚ç”¨äº map<key, vector<Object>*>
+å‚æ•°: 
 		v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class SetMap> void ClearSetMap(SetMap& v)
 {
@@ -413,11 +413,11 @@ template<class SetMap> struct SetMap_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸Õë¼¯ºÏÓ°Éä (Çå³ıÇ°ÏÈÇå³ıÖ¸Õë¼¯ºÏ), ÊÊÓÃÓÚ map<key, vector<Object*>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆé›†åˆå½±å°„ (æ¸…é™¤å‰å…ˆæ¸…é™¤æŒ‡é’ˆé›†åˆ), é€‚ç”¨äº map<key, vector<Object*>*>
+å‚æ•°: 
 		v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrSetMap> void ClearPtrSetMap(PtrSetMap& v)
 {
@@ -439,11 +439,11 @@ template<class PtrSetMap> struct PtrSetMap_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸ÕëÊı×é¼¯ºÏÓ°Éä (Çå³ıÇ°ÏÈÇå³ıÖ¸ÕëÊı×é¼¯ºÏ), ÊÊÓÃÓÚ map<key, vector<Object*[]>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆæ•°ç»„é›†åˆå½±å°„ (æ¸…é™¤å‰å…ˆæ¸…é™¤æŒ‡é’ˆæ•°ç»„é›†åˆ), é€‚ç”¨äº map<key, vector<Object*[]>*>
+å‚æ•°: 
 		v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrArraySetMap> void ClearPtrArraySetMap(PtrArraySetMap& v)
 {
@@ -465,11 +465,11 @@ template<class PtrArraySetMap> struct PtrArraySetMap_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÓ³Éä-Ó°Éä (Çå³ıÇ°ÏÈÇå³ıÄÚ²¿Ó³Éä), ÊÊÓÃÓÚ map<key, map<key2, Object>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æ˜ å°„-å½±å°„ (æ¸…é™¤å‰å…ˆæ¸…é™¤å†…éƒ¨æ˜ å°„), é€‚ç”¨äº map<key, map<key2, Object>*>
+å‚æ•°: 
 v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class MapMap> void ClearMapMap(MapMap& v)
 {
@@ -491,11 +491,11 @@ template<class MapMap> struct MapMap_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸ÕëÓ³Éä-Ó°Éä (Çå³ıÇ°ÏÈÇå³ıÖ¸ÕëÄÚ²¿Ó³Éä), ÊÊÓÃÓÚ map<key, map<key2, Object*>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆæ˜ å°„-å½±å°„ (æ¸…é™¤å‰å…ˆæ¸…é™¤æŒ‡é’ˆå†…éƒ¨æ˜ å°„), é€‚ç”¨äº map<key, map<key2, Object*>*>
+å‚æ•°: 
 		v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrMapMap> void ClearPtrMapMap(PtrMapMap& v)
 {
@@ -517,11 +517,11 @@ template<class PtrMapMap> struct PtrMapMap_Cleaner
 };
 
 /**********************************
-ÃèÊö: Çå³ıÖ¸ÕëÓ³Éä-Ó°Éä (Çå³ıÇ°ÏÈÇå³ıÖ¸ÕëÊı×éÄÚ²¿Ó³Éä), ÊÊÓÃÓÚ map<key, map<key2, Object*[]>*>
-²ÎÊı: 
+æè¿°: æ¸…é™¤æŒ‡é’ˆæ˜ å°„-å½±å°„ (æ¸…é™¤å‰å…ˆæ¸…é™¤æŒ‡é’ˆæ•°ç»„å†…éƒ¨æ˜ å°„), é€‚ç”¨äº map<key, map<key2, Object*[]>*>
+å‚æ•°: 
 		v		: map
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 template<class PtrArrayMapMap> void ClearPtrArrayMapMap(PtrArrayMapMap& v)
 {
@@ -543,7 +543,7 @@ template<class PtrArrayMapMap> struct PtrArrayMapMap_Cleaner
 };
 
 /************************************************************************/
-/*                           Ö¸Õë¼¯ºÏÈİÆ÷                               */
+/*                           æŒ‡é’ˆé›†åˆå®¹å™¨                               */
 /************************************************************************/
 template<class Set, class Cleaner> struct SetWrapper
 {
@@ -602,12 +602,12 @@ template<class Set, class Cleaner> struct VectorWrapper : public SetWrapper<Set,
 };
 
 /************************************************************************/
-/*                         Ö¸ÕëÊı×é¼¯ºÏÈİÆ÷                             */
+/*                         æŒ‡é’ˆæ•°ç»„é›†åˆå®¹å™¨                             */
 /************************************************************************/
 
 
 /************************************************************************/
-/*                           Ö¸ÕëÓ³ÉäÈİÆ÷                               */
+/*                           æŒ‡é’ˆæ˜ å°„å®¹å™¨                               */
 /************************************************************************/
 template<class Map, class Cleaner> struct MapWrapper
 {
@@ -657,7 +657,7 @@ private:
 };
 
 /************************************************************************/
-/*                            ±È½Ï·Âº¯Êı                                */
+/*                            æ¯”è¾ƒä»¿å‡½æ•°                                */
 /************************************************************************/
 
 template<class T> struct char_comparator
@@ -857,7 +857,7 @@ template<class T, bool CASE = false>
 // T -> TCHAR* / CString
 struct str_comp_func
 {
-	//±È½Ïº¯Êı¡£
+	//æ¯”è¾ƒå‡½æ•°ã€‚
 	bool operator() (const T &A, const T &B) const
 	{
 		if(!CASE)
@@ -876,7 +876,7 @@ typedef uncase_tchar_comp_func				tchar_ptr_ucase_comp_func;
 typedef case_string_comp_func				string_case_comp_func;
 typedef uncase_string_comp_func				string_ucase_comp_func;
 /************************************************************************/
-/*                            ÅÅĞò·Âº¯Êı                                */
+/*                            æ’åºä»¿å‡½æ•°                                */
 /************************************************************************/
 template<bool ASC = true>
 struct bool_sort_func
@@ -1031,7 +1031,7 @@ typedef str_sort_func<TCHAR*, false, false>		tchar_ptr_desc_ucase_sort_func;
 typedef str_sort_func<CString, false, false>	string_desc_ucase_sort_func;
 
 /************************************************************************/
-/*					   smart_ptr µ¥ÊµÌå»òÊı×éÖÇÄÜÖ¸Õë                    */
+/*					   smart_ptr å•å®ä½“æˆ–æ•°ç»„æ™ºèƒ½æŒ‡é’ˆ                    */
 /************************************************************************/
 
 template<class _Ty>
@@ -1123,7 +1123,7 @@ protected:
 
 
 /************************************************************************/
-/*				    smart_simple_ptr µ¥ÊµÌåÖÇÄÜÖ¸Õë                      */
+/*				    smart_simple_ptr å•å®ä½“æ™ºèƒ½æŒ‡é’ˆ                      */
 /************************************************************************/
 
 template<class _Ty>
@@ -1152,7 +1152,7 @@ private:
 };
 
 /************************************************************************/
-/*		   smart_gd_simple_ptr µ¥ÊµÌåÖÇÄÜÖ¸Õë (Ê¹ÓÃÈ«¾Ö delete)          */
+/*		   smart_gd_simple_ptr å•å®ä½“æ™ºèƒ½æŒ‡é’ˆ (ä½¿ç”¨å…¨å±€ delete)          */
 /************************************************************************/
 
 template<class _Ty>
@@ -1181,7 +1181,7 @@ private:
 };
 
 /************************************************************************/
-/*                   smart_array_ptr Êı×éÖÇÄÜÖ¸Õë                        */
+/*                   smart_array_ptr æ•°ç»„æ™ºèƒ½æŒ‡é’ˆ                        */
 /************************************************************************/
 
 template<class _Ty>
@@ -1210,7 +1210,7 @@ private:
 };
 
 /************************************************************************/
-/*          smart_gd_array_ptr µ¥ÊµÌåÖÇÄÜÖ¸Õë (Ê¹ÓÃÈ«¾Ö delete)          */
+/*          smart_gd_array_ptr å•å®ä½“æ™ºèƒ½æŒ‡é’ˆ (ä½¿ç”¨å…¨å±€ delete)          */
 /************************************************************************/
 
 template<class _Ty>

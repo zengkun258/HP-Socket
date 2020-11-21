@@ -1,9 +1,9 @@
-/*
+ï»¿/*
  * Copyright: JessMA Open Source (ldcsaa@gmail.com)
  *
  * Author	: Bruce Liang
  * Website	: https://github.com/ldcsaa
- * Project	: https://github.com/ldcsaa/HP-Socket/HP-Socket
+ * Project	: https://github.com/ldcsaa/HP-Socket
  * Blog		: http://www.cnblogs.com/ldcsaa
  * Wiki		: http://www.oschina.net/p/hp-socket
  * QQ Group	: 44636872, 75375912
@@ -23,129 +23,129 @@
  
 #pragma once
 
-/* timeGetTime() °ü×°·½·¨ */
+/* timeGetTime() åŒ…è£…æ–¹æ³• */
 DWORD TimeGetTime();
 
 /**********************************
-ÃèÊö: »ñÈ¡µ±Ç°Ê±¼äÓëÔ­Ê¼Ê±¼äµÄÊ±¼ä²î
-²ÎÊı: 
-		dwOriginal	: Ô­Ê¼Ê±¼ä£¨ºÁÃë£©£¬Í¨³£ÓÃ timeGetTime() »ò GetTickCount() »ñÈ¡
-		dwCurrent	: µ±Ç°Ê±¼ä£¨ºÁÃë£©£¬Í¨³£ÓÃ timeGetTime() »ò GetTickCount() »ñÈ¡
+æè¿°: è·å–å½“å‰æ—¶é—´ä¸åŸå§‹æ—¶é—´çš„æ—¶é—´å·®
+å‚æ•°: 
+		dwOriginal	: åŸå§‹æ—¶é—´ï¼ˆæ¯«ç§’ï¼‰ï¼Œé€šå¸¸ç”¨ timeGetTime() æˆ– GetTickCount() è·å–
+		dwCurrent	: å½“å‰æ—¶é—´ï¼ˆæ¯«ç§’ï¼‰ï¼Œé€šå¸¸ç”¨ timeGetTime() æˆ– GetTickCount() è·å–
 
-·µ»ØÖµ:	Óëµ±Ç° timeGetTime() Ö®¼äµÄÊ±¼ä²î
+è¿”å›å€¼:	ä¸å½“å‰ timeGetTime() ä¹‹é—´çš„æ—¶é—´å·®
 **********************************/
 DWORD GetTimeGap32(DWORD dwOriginal, DWORD dwCurrent = 0);
 
 #if _WIN32_WINNT >= _WIN32_WINNT_WS08
 /**********************************
-ÃèÊö: »ñÈ¡µ±Ç°Ê±¼äÓëÔ­Ê¼Ê±¼äµÄÊ±¼ä²î
-²ÎÊı: 
-		ullOriginal	: Ô­Ê¼Ê±¼ä£¨ºÁÃë£©£¬Í¨³£ÓÃ GetTickCount64() »ñÈ¡
-		ullCurrent	: µ±Ç°Ê±¼ä£¨ºÁÃë£©£¬Í¨³£ÓÃ GetTickCount64() »ñÈ¡
+æè¿°: è·å–å½“å‰æ—¶é—´ä¸åŸå§‹æ—¶é—´çš„æ—¶é—´å·®
+å‚æ•°: 
+		ullOriginal	: åŸå§‹æ—¶é—´ï¼ˆæ¯«ç§’ï¼‰ï¼Œé€šå¸¸ç”¨ GetTickCount64() è·å–
+		ullCurrent	: å½“å‰æ—¶é—´ï¼ˆæ¯«ç§’ï¼‰ï¼Œé€šå¸¸ç”¨ GetTickCount64() è·å–
 
-·µ»ØÖµ:	Óëµ±Ç° GetTickCount64() Ö®¼äµÄÊ±¼ä²î
+è¿”å›å€¼:	ä¸å½“å‰ GetTickCount64() ä¹‹é—´çš„æ—¶é—´å·®
 **********************************/
 ULONGLONG GetTimeGap64(ULONGLONG ullOriginal, ULONGLONG ullCurrent = 0);
 #endif
 
 /**********************************
-ÃèÊö: ´¦ÀíWindowsÏûÏ¢
-²ÎÊı: 
-			bDispatchQuitMsg	: ÊÇ·ñ×ª·¢ WM_QUIT ÏûÏ¢
-									TRUE : ×ª·¢£¨Ä¬ÈÏ£©
-									FALSE: ²»×ª·¢£¬²¢·µ»Ø FALSE
+æè¿°: å¤„ç†Windowsæ¶ˆæ¯
+å‚æ•°: 
+			bDispatchQuitMsg	: æ˜¯å¦è½¬å‘ WM_QUIT æ¶ˆæ¯
+									TRUE : è½¬å‘ï¼ˆé»˜è®¤ï¼‰
+									FALSE: ä¸è½¬å‘ï¼Œå¹¶è¿”å› FALSE
 
-·µ»ØÖµ:		TRUE  : ÊÕÍêÏûÏ¢
-			FALSE : bDispatchQuitMsg ²ÎÊıÎª FALSE ²¢ÊÕµ½ WM_QUIT ÏûÏ¢		
+è¿”å›å€¼:		TRUE  : æ”¶å®Œæ¶ˆæ¯
+			FALSE : bDispatchQuitMsg å‚æ•°ä¸º FALSE å¹¶æ”¶åˆ° WM_QUIT æ¶ˆæ¯		
 **********************************/
 BOOL PeekMessageLoop(BOOL bDispatchQuitMsg = TRUE);
 
 /**********************************
-ÃèÊö: µÈ´ıÖ¸¶¨Ê±¼ä, Í¬Ê±´¦ÀíWindowsÏûÏ¢
-²ÎÊı: (²Î¿¼: MsgWaitForMultipleObjectsEx() )
-		dwHandles		: Êı×éÔªËØ¸öÊı
-		szHandles		: ¶ÔÏó¾ä±úÊı×é
-		dwMilliseconds	: µÈ´ıÊ±¼ä (ºÁÃë)
-		dwWakeMask		: ÏûÏ¢¹ıÂË±êÊ¶
-		dwFlags			: µÈ´ıÀàĞÍ
+æè¿°: ç­‰å¾…æŒ‡å®šæ—¶é—´, åŒæ—¶å¤„ç†Windowsæ¶ˆæ¯
+å‚æ•°: (å‚è€ƒ: MsgWaitForMultipleObjectsEx() )
+		dwHandles		: æ•°ç»„å…ƒç´ ä¸ªæ•°
+		szHandles		: å¯¹è±¡å¥æŸ„æ•°ç»„
+		dwMilliseconds	: ç­‰å¾…æ—¶é—´ (æ¯«ç§’)
+		dwWakeMask		: æ¶ˆæ¯è¿‡æ»¤æ ‡è¯†
+		dwFlags			: ç­‰å¾…ç±»å‹
 
-·µ»ØÖµ: (0 ~ dwHandles - 1): µÈ´ı³É¹¦
-		WAIT_TIMEOUT		: ³¬Ê±
-		WAIT_FAILED			: Ö´ĞĞÊ§°Ü
+è¿”å›å€¼: (0 ~ dwHandles - 1): ç­‰å¾…æˆåŠŸ
+		WAIT_TIMEOUT		: è¶…æ—¶
+		WAIT_FAILED			: æ‰§è¡Œå¤±è´¥
 **********************************/
 DWORD WaitForMultipleObjectsWithMessageLoop(DWORD dwHandles, HANDLE szHandles[], DWORD dwMilliseconds = INFINITE, BOOL bWaitAll = FALSE, DWORD dwWakeMask = QS_ALLINPUT);
 
 /**********************************
-ÃèÊö: µÈ´ıÖ¸¶¨Ê±¼ä, Í¬Ê±´¦ÀíWindowsÏûÏ¢
-²ÎÊı: (²Î¿¼: MsgWaitForMultipleObjectsEx() )
-		hHandle			: ¶ÔÏó¾ä±ú
-		dwMilliseconds	: µÈ´ıÊ±¼ä (ºÁÃë)
-		dwWakeMask		: ÏûÏ¢¹ıÂË±êÊ¶
-		dwFlags			: µÈ´ıÀàĞÍ
+æè¿°: ç­‰å¾…æŒ‡å®šæ—¶é—´, åŒæ—¶å¤„ç†Windowsæ¶ˆæ¯
+å‚æ•°: (å‚è€ƒ: MsgWaitForMultipleObjectsEx() )
+		hHandle			: å¯¹è±¡å¥æŸ„
+		dwMilliseconds	: ç­‰å¾…æ—¶é—´ (æ¯«ç§’)
+		dwWakeMask		: æ¶ˆæ¯è¿‡æ»¤æ ‡è¯†
+		dwFlags			: ç­‰å¾…ç±»å‹
 
-·µ»ØÖµ: TRUE: µÈ´ı³É¹¦£¬FALSE: ³¬Ê±		
+è¿”å›å€¼: TRUE: ç­‰å¾…æˆåŠŸï¼ŒFALSE: è¶…æ—¶		
 **********************************/
 BOOL MsgWaitForSingleObject(HANDLE hHandle, DWORD dwMilliseconds = INFINITE, BOOL bWaitAll = FALSE, DWORD dwWakeMask = QS_ALLINPUT);
 
 /**********************************
-ÃèÊö: µÈ´ıÖ¸¶¨Ê±¼ä		
-·µ»ØÖµ: (ÎŞ)		
+æè¿°: ç­‰å¾…æŒ‡å®šæ—¶é—´		
+è¿”å›å€¼: (æ— )		
 **********************************/
 void WaitFor(DWORD dwMilliseconds);
 
 /**********************************
-ÃèÊö: µÈ´ıÖ¸¶¨Ê±¼ä, Í¬Ê±´¦ÀíWindowsÏûÏ¢
-²ÎÊı: (²Î¿¼: MsgWaitForMultipleObjectsEx() )
-		dwMilliseconds	: µÈ´ıÊ±¼ä (ºÁÃë)
-		dwWakeMask		: ÏûÏ¢¹ıÂË±êÊ¶
-		dwFlags			: µÈ´ıÀàĞÍ
+æè¿°: ç­‰å¾…æŒ‡å®šæ—¶é—´, åŒæ—¶å¤„ç†Windowsæ¶ˆæ¯
+å‚æ•°: (å‚è€ƒ: MsgWaitForMultipleObjectsEx() )
+		dwMilliseconds	: ç­‰å¾…æ—¶é—´ (æ¯«ç§’)
+		dwWakeMask		: æ¶ˆæ¯è¿‡æ»¤æ ‡è¯†
+		dwFlags			: ç­‰å¾…ç±»å‹
 
-·µ»ØÖµ: (ÎŞ)		
+è¿”å›å€¼: (æ— )		
 **********************************/
 void WaitWithMessageLoop(DWORD dwMilliseconds, DWORD dwWakeMask = QS_ALLINPUT);
 
 /**********************************
-ÃèÊö: µÈ´ıÄ³¸ö±äÁ¿Ğ¡ÓÚÖ¸¶¨Öµ
-²ÎÊı: 
-		plWorkingItemCount		: ¼àÊÓ±äÁ¿
-		lMaxWorkingItemCount	: Ö¸¶¨Öµ
-		dwCheckInterval			: ¼ì²é¼ä¸ô (ºÁÃë)
+æè¿°: ç­‰å¾…æŸä¸ªå˜é‡å°äºæŒ‡å®šå€¼
+å‚æ•°: 
+		plWorkingItemCount		: ç›‘è§†å˜é‡
+		lMaxWorkingItemCount	: æŒ‡å®šå€¼
+		dwCheckInterval			: æ£€æŸ¥é—´éš” (æ¯«ç§’)
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 void WaitForWorkingQueue(long* plWorkingItemCount, long lMaxWorkingItemCount, DWORD dwCheckInterval);
 /**********************************
-ÃèÊö: µÈ´ıÄ³¸ö±äÁ¿¼õĞ¡µ½ 0
-²ÎÊı: 
-		plWorkingItemCount		: ¼àÊÓ±äÁ¿
-		dwCheckInterval			: ¼ì²é¼ä¸ô (ºÁÃë)
+æè¿°: ç­‰å¾…æŸä¸ªå˜é‡å‡å°åˆ° 0
+å‚æ•°: 
+		plWorkingItemCount		: ç›‘è§†å˜é‡
+		dwCheckInterval			: æ£€æŸ¥é—´éš” (æ¯«ç§’)
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 void WaitForComplete	(long* plWorkingItemCount, DWORD dwCheckInterval);
 
 /**********************************
-ÃèÊö: µÈ´ıÓÃWaitWithMessageLoop()º¯ÊıµÈ´ıÄ³¸ö±äÁ¿Ğ¡ÓÚÖ¸¶¨Öµ
-²ÎÊı: 
-		plWorkingItemCount		: ¼àÊÓ±äÁ¿
-		lMaxWorkingItemCount	: Ö¸¶¨Öµ
-		dwCheckInterval			: ¼ì²é¼ä¸ô (ºÁÃë)
+æè¿°: ç­‰å¾…ç”¨WaitWithMessageLoop()å‡½æ•°ç­‰å¾…æŸä¸ªå˜é‡å°äºæŒ‡å®šå€¼
+å‚æ•°: 
+		plWorkingItemCount		: ç›‘è§†å˜é‡
+		lMaxWorkingItemCount	: æŒ‡å®šå€¼
+		dwCheckInterval			: æ£€æŸ¥é—´éš” (æ¯«ç§’)
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 void MsgWaitForWorkingQueue	(long* plWorkingItemCount, long lMaxWorkingItemCount, DWORD dwCheckInterval = 10);
 /**********************************
-ÃèÊö: µÈ´ıÓÃWaitWithMessageLoop()º¯ÊıµÈ´ıÄ³¸ö±äÁ¿¼õĞ¡µ½ 0
-²ÎÊı: 
-		plWorkingItemCount		: ¼àÊÓ±äÁ¿
-		dwCheckInterval			: ¼ì²é¼ä¸ô (ºÁÃë)
+æè¿°: ç­‰å¾…ç”¨WaitWithMessageLoop()å‡½æ•°ç­‰å¾…æŸä¸ªå˜é‡å‡å°åˆ° 0
+å‚æ•°: 
+		plWorkingItemCount		: ç›‘è§†å˜é‡
+		dwCheckInterval			: æ£€æŸ¥é—´éš” (æ¯«ç§’)
 
-·µ»ØÖµ: 		
+è¿”å›å€¼: 		
 **********************************/
 void MsgWaitForComplete		(long* plWorkingItemCount, DWORD dwCheckInterval = 10);
 
 /**********************************
-ÃèÊö: ÉèÖÃÊ±ÖÓ·Ö±æÂÊ
+æè¿°: è®¾ç½®æ—¶é’Ÿåˆ†è¾¨ç‡
 **********************************/
 class CTimePeriod
 {
